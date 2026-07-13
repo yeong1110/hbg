@@ -1,0 +1,19 @@
+{
+  "name": "@hbc/public",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n ui,worker -c magenta,yellow \"vite --port 5173\" \"wrangler dev --port 8787 --inspector-port 9230 --persist-to ../../.wrangler/state --var ENVIRONMENT:local --var PUBLIC_ORIGIN:http://localhost:5173 --var TURNSTILE_EXPECTED_HOSTNAME:localhost --var TURNSTILE_REPORT_SITE_KEY:1x00000000000000000000AA --var TURNSTILE_REPRODUCE_SITE_KEY:1x00000000000000000000AA\"",
+    "build": "vite build && wrangler deploy --dry-run --outdir .wrangler-dry-run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hbc/shared": "*",
+    "hono": "^4.10.7",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "^7.9.6",
+    "zod": "^4.1.12"
+  }
+}

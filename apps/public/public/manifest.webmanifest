@@ -1,0 +1,9 @@
+{
+  "name": "인류 버그 센터",
+  "short_name": "인류 버그",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f2effa",
+  "theme_color": "#7c5ce7",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

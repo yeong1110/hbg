@@ -1,0 +1,20 @@
+{
+  "name": "@hbc/admin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n ui,worker -c cyan,green \"vite --port 5174\" \"wrangler dev --port 8788 --inspector-port 9231 --persist-to ../../.wrangler/state --var ENVIRONMENT:local --var ADMIN_ORIGIN:http://localhost:5174\"",
+    "build": "vite build && wrangler deploy --dry-run --outdir .wrangler-dry-run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@hbc/shared": "*",
+    "hono": "^4.10.7",
+    "jose": "^6.1.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-router-dom": "^7.9.6",
+    "zod": "^4.1.12"
+  }
+}
