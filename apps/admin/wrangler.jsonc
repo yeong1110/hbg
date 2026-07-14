@@ -5,7 +5,7 @@
   "compatibility_date": "2026-05-22",
   "compatibility_flags": ["nodejs_compat"],
   "preview_urls": false,
-  "assets": { "directory": "dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": true },
+  "assets": { "directory": "dist", "binding": "ASSETS", "html_handling": "none", "not_found_handling": "single-page-application", "run_worker_first": true },
   "d1_databases": [{ "binding": "DB", "database_name": "human-bug-center-db", "database_id": "e02add72-c44a-4268-af87-085ee7097d97", "migrations_dir": "../../migrations" }],
   "vars": { "ENVIRONMENT": "production", "ADMIN_ORIGIN": "https://human-bug-center-admin.REPLACE_ACCOUNT.workers.dev", "TEAM_DOMAIN": "https://REPLACE_TEAM.cloudflareaccess.com", "POLICY_AUD": "REPLACE_ACCESS_AUD" },
   "ratelimits": [{ "name": "ADMIN_LIMIT", "namespace_id": "2001", "simple": { "limit": 120, "period": 60 } }],
