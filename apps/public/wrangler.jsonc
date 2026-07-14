@@ -14,7 +14,7 @@
   "d1_databases": [{
     "binding": "DB",
     "database_name": "human-bug-center-db",
-    "database_id": "00000000-0000-4000-8000-000000000000",
+    "database_id": "e02add72-c44a-4268-af87-085ee7097d97",
     "migrations_dir": "../../migrations"
   }],
   "vars": {
