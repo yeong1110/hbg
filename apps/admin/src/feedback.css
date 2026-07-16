@@ -1,0 +1,58 @@
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.loading-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: admin-spin 0.7s linear infinite;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  z-index: 100;
+  max-width: min(90vw, 420px);
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: rgba(20, 22, 31, 0.88);
+  color: #f8f8fb;
+  box-shadow: 0 12px 35px rgba(17, 19, 29, 0.22);
+  backdrop-filter: blur(10px);
+  font-size: 14px;
+  font-weight: 700;
+  transform: translateX(-50%);
+  animation: toast-in 0.25s ease-out;
+}
+
+@keyframes admin-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translate(-50%, 18px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .toast { animation: none; }
+}
